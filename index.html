@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./adaptive_style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,6 +21,25 @@
     <img src="./assets/bg_img_3.png" alt="error" class="bg_gradient" />
     <img src="./assets/bg_img_4.png" alt="error" class="bg_gradient" />
     <div class="container">
+
+      <!-- burger start -->
+
+      <div class="burger-menu">
+        <div class="burger-menu__content">
+          <img src="./assets/cancel_btn.png" alt="" class="burger-menu__btn_close">
+
+          <input type="text" class="burger-menu__input" />
+          <ul class="burger-menu__list">
+            <li class="burger-menu__item"><a href="#">Home</a></li>
+            <li class="burger-menu__item"><a href="#">Services</a></li>
+            <li class="burger-menu__item"><a href="#">Our Project</a></li>
+            <li class="burger-menu__item"><a href="#">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- burger end -->
+
       <!-- navbar start  -->
       <div class="navbar">
         <img src="./assets/logo.svg" alt="" class="navbar__logo" />
@@ -30,6 +50,7 @@
           <li class="list__item"><a href="#">About Us</a></li>
         </ul>
         <input type="text" class="navbar__input" />
+        <img src="./assets/navbar_btn.png" alt="" class="navbar__btn_burger">
       </div>
       <!-- navbar end -->
 
@@ -151,5 +172,18 @@
       </footer>
       <!-- footer block end -->
     </div>
+    <script>
+      let openBtn = document.querySelector('.navbar__btn_burger');
+      let closeBtn = document.querySelector('.burger-menu__btn_close');
+      let burgerMenu = document.querySelector('.burger-menu');
+
+      openBtn.addEventListener('click', () => {
+          burgerMenu.style.display = 'block';
+      })
+
+      closeBtn.addEventListener('click', () => {
+          burgerMenu.style.display = 'none';
+      })
+  </script>
   </body>
 </html>
